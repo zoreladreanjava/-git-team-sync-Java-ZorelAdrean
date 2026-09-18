@@ -1,4 +1,4 @@
-function createOrder(items) {
+﻿function createOrder(items) {
   return {
     items,
     total: items.reduce((sum, i) => sum + i.price * i.qty, 0),
@@ -16,9 +16,6 @@ function cancelOrder(order) {
 }
 
 function calculateLoyaltyPoints(order) {
-
-  // add one more change here to calculate loyalty points based on the order total
-
   return Math.floor(order.total / 10);
 }
 
