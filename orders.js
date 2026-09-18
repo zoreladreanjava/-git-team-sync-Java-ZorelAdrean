@@ -1,4 +1,4 @@
-function createOrder(items) {
+﻿function createOrder(items) {
   return {
     items,
     total: items.reduce((sum, i) => sum + i.price * i.qty, 0),
@@ -19,4 +19,4 @@ function calculateLoyaltyPoints(order) {
   return Math.round(order.total / 10);
 }
 
-module.exports = { createOrder, applyDiscount, cancelOrder };
+module.exports = { createOrder, applyDiscount, cancelOrder, calculateLoyaltyPoints };
