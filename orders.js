@@ -15,4 +15,13 @@ function cancelOrder(order) {
   return { ...order, status: 'cancelled', total: 0 };
 }
 
-module.exports = { createOrder, applyDiscount, cancelOrder };
+function calculateLoyaltyPoints(order) {
+  return Math.floor(order.total / 10);
+}
+
+function VipBonus (order) {
+  if ( order > 100 )
+    return 1.5 * calculateLoyaltyPoints;
+}
+
+module.exports = { createOrder, applyDiscount, cancelOrder, calculateLoyaltyPoints };
