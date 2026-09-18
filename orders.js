@@ -1,4 +1,4 @@
-function createOrder(items) {
+﻿function createOrder(items) {
   return {
     items,
     total: items.reduce((sum, i) => sum + i.price * i.qty, 0),
